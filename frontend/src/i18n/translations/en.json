@@ -1,0 +1,259 @@
+{
+  "common": {
+    "appName": "Bricol",
+    "tagline": "Your solution for all home repairs in Morocco",
+    "search": "Search",
+    "login": "Login",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "help": "Help",
+    "contact": "Contact",
+    "about": "About"
+  },
+  
+  "nav": {
+    "forWorkers": "For Workers",
+    "forCustomers": "For Customers",
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "blog": "Blog"
+  },
+  
+  "hero": {
+    "title": "Home Repairs",
+    "highlighted": "with confidence and professionalism",
+    "subtitle": "Connect with the best certified artisans and technicians in Morocco.",
+    "services": "Repair, Installation, Maintenance",
+    "searchPlaceholder": "What do you want to fix? (ex: water leak, AC installation, painting...)",
+    "city": "City",
+    "searchNow": "Search Now",
+    "popularServices": "Popular Services",
+    "joinAsWorker": "Join as a Worker",
+    "watchDemo": "🎬 Watch How Bricol Works",
+    "getOffer": "⭐ Get Special Offer"
+  },
+  
+  "stats": {
+    "workers": "Certified Workers",
+    "satisfaction": "Customer Satisfaction",
+    "responseTime": "Average Response Time",
+    "guarantee": "30-Day Guarantee"
+  },
+  
+  "services": {
+    "electrical": "Electrical",
+    "plumbing": "Plumbing",
+    "carpentry": "Carpentry",
+    "painting": "Painting",
+    "ac": "Air Conditioning",
+    "furniture": "Furniture"
+  },
+  
+  "ai": {
+    "assistant": "AI Assistant",
+    "chatTitle": "BricoBot Assistant",
+    "chatSubtitle": "Your smart repair assistant",
+    "welcome": "Hello! I'm BricoBot, the smart assistant. Can you describe the problem you're having at home?",
+    "typeHere": "Describe your problem in detail or upload a photo...",
+    "quickReplies": [
+      "Electrical problem",
+      "Water leak",
+      "Furniture assembly",
+      "Wall painting",
+      "AC repair"
+    ],
+    "send": "Send",
+    "uploadPhoto": "Upload photo",
+    "voiceInput": "Voice input",
+    "emergency": "🚨 Emergency - Call Now"
+  },
+  
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "No account?",
+    "haveAccount": "Already have an account?",
+    "customer": "Customer",
+    "worker": "Worker",
+    "fullName": "Full Name",
+    "phone": "Phone",
+    "city": "City",
+    "experience": "Years of experience",
+    "specialty": "Specialty",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit"
+  },
+  
+  "cities": {
+    "casablanca": "Casablanca",
+    "rabat": "Rabat",
+    "marrakech": "Marrakech",
+    "tangier": "Tangier",
+    "fes": "Fes",
+    "agadir": "Agadir",
+    "meknes": "Meknes",
+    "oujda": "Oujda",
+    "select": "Select City"
+  },
+  
+  "footer": {
+    "description": "The trusted platform for all your home repair needs in Morocco.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "cities": "Cities",
+    "legal": "Legal",
+    "contactInfo": "Contact Info",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookies"
+  },
+  
+  "categories": {
+    "electrical": "Electrical",
+    "plumbing": "Plumbing",
+    "carpentry": "Carpentry",
+    "painting": "Painting",
+    "airConditioning": "Air Conditioning",
+    "furniture": "Furniture",
+    "appliance": "Appliance Repair",
+    "cleaning": "Cleaning",
+    "gardening": "Gardening",
+    "moving": "Moving",
+    "security": "Security",
+    "smartHome": "Smart Home"
+  },
+  
+  "buttons": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "viewAll": "View All",
+    "downloadApp": "Download App",
+    "contactUs": "Contact Us",
+    "subscribe": "Subscribe"
+  },
+  
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Join thousands of satisfied customers across Morocco"
+  },
+  
+  "features": {
+    "trust": "Verified Workers",
+    "trustDesc": "All workers are verified and background-checked",
+    "guarantee": "Quality Guarantee",
+    "guaranteeDesc": "30-day warranty on all services",
+    "support": "24/7 Support",
+    "supportDesc": "Always here to help you",
+    "payment": "Secure Payment",
+    "paymentDesc": "Multiple safe payment options"
+  },
+  
+  "howItWorks": {
+    "title": "How Bricol Works",
+    "step1": "Describe Your Problem",
+    "step1Desc": "Use our AI assistant or describe what needs fixing",
+    "step2": "Get Matched",
+    "step2Desc": "We'll connect you with the best available workers",
+    "step3": "Receive Quotes",
+    "step3Desc": "Get multiple quotes and choose the best one",
+    "step4": "Get It Fixed",
+    "step4Desc": "Your problem gets solved with our quality guarantee"
+  },
+  
+  "workerBenefits": {
+    "title": "Benefits for Workers",
+    "moreJobs": "More Job Opportunities",
+    "flexibleSchedule": "Flexible Schedule",
+    "securePayments": "Secure Payments",
+    "skillDevelopment": "Skill Development",
+    "customerReviews": "Build Your Reputation"
+  },
+  
+  "customerBenefits": {
+    "title": "Benefits for Customers",
+    "verifiedWorkers": "Verified & Rated Workers",
+    "transparentPricing": "Transparent Pricing",
+    "quickService": "Quick Service",
+    "qualityGuarantee": "Quality Guarantee",
+    "easyBooking": "Easy Booking"
+  },
+  
+  "messages": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "noResults": "No results found",
+    "tryAgain": "Please try again",
+    "requiredField": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "invalidPhone": "Invalid phone number"
+  },
+  
+  "months": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  
+  "days": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  
+  "time": {
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "evening": "Evening",
+    "now": "Now",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This Week"
+  },
+  
+  "status": {
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
+  },
+  
+  "ratings": {
+    "excellent": "Excellent",
+    "veryGood": "Very Good",
+    "good": "Good",
+    "fair": "Fair",
+    "poor": "Poor"
+  },
+  
+  "pricing": {
+    "startingFrom": "Starting from",
+    "perHour": "per hour",
+    "perService": "per service",
+    "free": "Free",
+    "discount": "Discount",
+    "total": "Total"
+  }
+}
