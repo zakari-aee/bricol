@@ -22,8 +22,8 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <img
-                className="h-8 w-8"
-                src="/logo.svg"
+                className="h-12 w-12"
+                src="/img/a.jpeg"
                 alt={t('common.appName')}
               />
               <span className={`ml-2 text-xl font-bold text-gray-800 ${isRTL ? 'mr-2' : 'ml-2'}`}>

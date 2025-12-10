@@ -13,7 +13,6 @@
     "contact": "Contact",
     "about": "About"
   },
-  
   "nav": {
     "forWorkers": "For Workers",
     "forCustomers": "For Customers",
@@ -22,7 +21,6 @@
     "pricing": "Pricing",
     "blog": "Blog"
   },
-  
   "hero": {
     "title": "Home Repairs",
     "highlighted": "with confidence and professionalism",
@@ -36,14 +34,12 @@
     "watchDemo": "🎬 Watch How Bricol Works",
     "getOffer": "⭐ Get Special Offer"
   },
-  
   "stats": {
     "workers": "Certified Workers",
     "satisfaction": "Customer Satisfaction",
     "responseTime": "Average Response Time",
     "guarantee": "30-Day Guarantee"
   },
-  
   "services": {
     "electrical": "Electrical",
     "plumbing": "Plumbing",
@@ -52,7 +48,6 @@
     "ac": "Air Conditioning",
     "furniture": "Furniture"
   },
-  
   "ai": {
     "assistant": "AI Assistant",
     "chatTitle": "BricoBot Assistant",
@@ -71,25 +66,44 @@
     "voiceInput": "Voice input",
     "emergency": "🚨 Emergency - Call Now"
   },
-  
   "auth": {
-    "email": "Email",
-    "password": "Password",
+    "signInToContinue": "Sign in to continue to your account",
+    "createAccount": "Create your account",
+    "personalInfo": "Personal Information",
+    "customerDetails": "Customer Details",
+    "workerDetails": "Worker Details",
+    "professionalTitle": "Professional Title",
+    "experienceYears": "Years of Experience",
+    "hourlyRate": "Hourly Rate",
+    "categories": "Categories",
+    "address": "Address",
+    "confirmPassword": "Confirm Password",
+    "signInWithGoogle": "Sign in with Google",
+    "orContinueWith": "Or continue with",
+    "byContinuing": "By continuing, you agree to our",
+    "and": "and",
     "forgotPassword": "Forgot Password?",
-    "noAccount": "No account?",
+    "noAccount": "Don't have an account?",
     "haveAccount": "Already have an account?",
-    "customer": "Customer",
-    "worker": "Worker",
-    "fullName": "Full Name",
-    "phone": "Phone",
-    "city": "City",
-    "experience": "Years of experience",
-    "specialty": "Specialty",
+    "selectCity": "Select your city",
+    "account": "Account",
+    "profile": "Profile",
+    "details": "Details",
     "next": "Next",
     "previous": "Previous",
-    "submit": "Submit"
+    "completeRegistration": "Complete Registration",
+    "creatingAccount": "Creating account...",
+    "signingIn": "Signing in...",
+    "loginSuccess": "Login successful! Redirecting...",
+    "loginError": "Invalid email or password",
+    "googleError": "Error signing in with Google",
+    "registrationSuccess": "Registration successful! Redirecting...",
+    "registrationError": "Registration failed. Please try again.",
+    "passwordsDontMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "fillRequiredFields": "Please fill all required fields",
+    "passwordMinLength": "Minimum 6 characters"
   },
-  
   "cities": {
     "casablanca": "Casablanca",
     "rabat": "Rabat",
@@ -101,7 +115,6 @@
     "oujda": "Oujda",
     "select": "Select City"
   },
-  
   "footer": {
     "description": "The trusted platform for all your home repair needs in Morocco.",
     "quickLinks": "Quick Links",
@@ -114,7 +127,6 @@
     "terms": "Terms of Service",
     "cookies": "Cookies"
   },
-  
   "categories": {
     "electrical": "Electrical",
     "plumbing": "Plumbing",
@@ -129,7 +141,6 @@
     "security": "Security",
     "smartHome": "Smart Home"
   },
-  
   "buttons": {
     "getStarted": "Get Started",
     "learnMore": "Learn More",
@@ -139,12 +150,10 @@
     "contactUs": "Contact Us",
     "subscribe": "Subscribe"
   },
-  
   "testimonials": {
     "title": "What Our Customers Say",
     "subtitle": "Join thousands of satisfied customers across Morocco"
   },
-  
   "features": {
     "trust": "Verified Workers",
     "trustDesc": "All workers are verified and background-checked",
@@ -155,7 +164,6 @@
     "payment": "Secure Payment",
     "paymentDesc": "Multiple safe payment options"
   },
-  
   "howItWorks": {
     "title": "How Bricol Works",
     "step1": "Describe Your Problem",
@@ -167,7 +175,6 @@
     "step4": "Get It Fixed",
     "step4Desc": "Your problem gets solved with our quality guarantee"
   },
-  
   "workerBenefits": {
     "title": "Benefits for Workers",
     "moreJobs": "More Job Opportunities",
@@ -176,7 +183,6 @@
     "skillDevelopment": "Skill Development",
     "customerReviews": "Build Your Reputation"
   },
-  
   "customerBenefits": {
     "title": "Benefits for Customers",
     "verifiedWorkers": "Verified & Rated Workers",
@@ -185,7 +191,6 @@
     "qualityGuarantee": "Quality Guarantee",
     "easyBooking": "Easy Booking"
   },
-  
   "messages": {
     "loading": "Loading...",
     "error": "An error occurred",
@@ -196,7 +201,6 @@
     "invalidEmail": "Invalid email address",
     "invalidPhone": "Invalid phone number"
   },
-  
   "months": {
     "january": "January",
     "february": "February",
@@ -211,7 +215,6 @@
     "november": "November",
     "december": "December"
   },
-  
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",
@@ -221,7 +224,6 @@
     "saturday": "Saturday",
     "sunday": "Sunday"
   },
-  
   "time": {
     "morning": "Morning",
     "afternoon": "Afternoon",
@@ -231,7 +233,6 @@
     "tomorrow": "Tomorrow",
     "thisWeek": "This Week"
   },
-  
   "status": {
     "pending": "Pending",
     "confirmed": "Confirmed",
@@ -239,7 +240,6 @@
     "completed": "Completed",
     "cancelled": "Cancelled"
   },
-  
   "ratings": {
     "excellent": "Excellent",
     "veryGood": "Very Good",
@@ -247,7 +247,6 @@
     "fair": "Fair",
     "poor": "Poor"
   },
-  
   "pricing": {
     "startingFrom": "Starting from",
     "perHour": "per hour",
