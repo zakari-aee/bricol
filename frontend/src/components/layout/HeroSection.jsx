@@ -3,7 +3,6 @@ import {
   Wrench,
   MapPin,
   ChevronRight,
-  Sparkles,
   Users,
   Shield,
   Clock,
@@ -75,7 +74,6 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 pt-32 pb-40 text-center">
         {/* Badge */}
         <div className="inline-flex items-center mb-8 px-6 py-2 bg-orange-50 rounded-full border border-orange-200 shadow-sm">
-          <Sparkles className="h-5 w-5 text-orange-500" />
           <span className="text-sm font-semibold text-orange-600 ml-2">
             {isRTL ? 'خدمات منزلية احترافية' : 'Professional Home Services'}
           </span>

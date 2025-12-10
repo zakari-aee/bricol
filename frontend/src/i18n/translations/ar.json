@@ -135,5 +135,27 @@
     "fillRequiredFields": "عمر جميع الحقول المطلوبة",
     "selectCategory": "اختر تخصصك",
     "selectAvailability": "اختر أيام وساعات العمل"
+  },
+  "features": {
+    "title": "لماذا تختارنا",
+    "subtitle": "خدمات بسيطة، سريعة، وموثوقة للجميع.",
+    "verifiedTitle": "حرفيون موثوقون",
+    "verifiedDesc": "جميع الحرفيين تم التحقق منهم بعناية.",
+    "fastTitle": "حجز سريع",
+    "fastDesc": "احجز خدمتك في دقائق معدودة.",
+    "supportTitle": "دعم 24/7",
+    "supportDesc": "فريقنا دائمًا متوفر لمساعدتك."
+  },
+  "how": {
+    "title": "كيف تعمل المنصة",
+    "subtitle": "احصل على خدمتك في أربع خطوات بسيطة.",
+    "registerTitle": "إنشاء حساب",
+    "registerDesc": "سجل كزبون أو كحرفي محترف.",
+    "chooseTitle": "اختر الخدمة",
+    "chooseDesc": "حدد الخدمة أو وقت التوفر.",
+    "bookTitle": "حجز فوري",
+    "bookDesc": "أكد الحجز في ثوانٍ.",
+    "payTitle": "الدفع والتقييم",
+    "payDesc": "ادفع بأمان وقيّم الخدمة."
   }
 }

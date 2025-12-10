@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { UserPlus } from 'lucide-react';
+import { UserPlus, User, Hammer } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import useTranslation from '../../hook/useTranslation';
 import LanguageSwitcher from '../../components/layout/LanguageSwitcher';
@@ -51,23 +51,29 @@ const RegisterPage = () => {
                   setUserType('customer');
                   setStep(1);
                 }}
-                className="p-8 border border-gray-200 rounded-2xl hover:border-orange-500 hover:shadow-lg transition text-left bg-white"
+                className="p-8 border border-gray-200 rounded-2xl hover:border-orange-500 hover:shadow-lg transition flex items-center gap-4 bg-white"
               >
-                <h3 className="text-xl font-bold mb-2 text-orange-500">
-                  {t('registration.customer')}
-                </h3>
-                <p className="text-gray-600">{t('registration.customerDetails')}</p>
+                <User className="w-10 h-10 text-orange-500" />
+                <div className="text-left">
+                  <h3 className="text-xl font-bold mb-1 text-orange-500">
+                    {t('registration.customer')}
+                  </h3>
+                  <p className="text-gray-600">{t('registration.customerDetails')}</p>
+                </div>
               </button>
 
               {/* Worker */}
               <button
                 onClick={() => navigate('/register/worker')} 
-                className="p-8 border border-gray-200 rounded-2xl hover:border-orange-500 hover:shadow-lg transition text-left bg-white"
+                className="p-8 border border-gray-200 rounded-2xl hover:border-orange-500 hover:shadow-lg transition flex items-center gap-4 bg-white"
               >
-                <h3 className="text-xl font-bold mb-2 text-orange-500">
-                  {t('registration.worker')}
-                </h3>
-                <p className="text-gray-600">{t('registration.workerDetails')}</p>
+                <Hammer className="w-10 h-10 text-orange-500" />
+                <div className="text-left">
+                  <h3 className="text-xl font-bold mb-1 text-orange-500">
+                    {t('registration.worker')}
+                  </h3>
+                  <p className="text-gray-600">{t('registration.workerDetails')}</p>
+                </div>
               </button>
             </div>
 
@@ -84,7 +90,7 @@ const RegisterPage = () => {
         {step === 1 && (
           <div className="mt-8 text-gray-700">
             <h3 className="text-2xl font-bold mb-4">{t('registration.customerForm')}</h3>
-            <p className="text-gray-500 mb-6">هنا غادي يجي الفورم ديال العميل</p>
+            <p className="text-gray-500 mb-6">{t('registration.fillCustomerForm')}</p>
 
             {/* Example form fields */}
             <div className="grid gap-4 md:grid-cols-2">

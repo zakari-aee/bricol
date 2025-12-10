@@ -12,6 +12,8 @@ import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import WorkerRegister from './pages/auth/WorkerRegister';
 import HeroSection from './components/layout/HeroSection';
+import FeaturesSection from './components/layout/FeaturesSection';
+import HowItWorksSection from './components/layout/HowItWorksSection';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
+          <FeaturesSection />
+          <HowItWorksSection />
 
           <Footer />
         </div>

@@ -35,22 +35,74 @@ const WorkerRegister = () => {
     { label: `🛠️ ${t("services.installation")}`, value: "installation" },
   ];
 
+  // ========================
+  // Validation Functions
+  // ========================
+  const validateFullName = (name) => {
+    if (!name.trim()) return "fillRequiredFields";
+    if (!/^[a-zA-Z\s]+$/.test(name)) return "invalidFullName";
+    return "";
+  };
+
+  const validatePhone = (phone) => {
+    if (!phone.trim()) return "fillRequiredFields";
+    if (!/^\+?\d{8,15}$/.test(phone)) return "invalidPhone";
+    return "";
+  };
+
+  const validateWhatsapp = (whatsapp) => {
+    if (!whatsapp) return "";
+    if (!/^\+?\d{8,15}$/.test(whatsapp)) return "invalidWhatsapp";
+    return "";
+  };
+
+  const validateExperienceYears = (years) => {
+    if (years === "") return "fillRequiredFields";
+    const num = Number(years);
+    if (isNaN(num) || num < 0 || num > 30) return "invalidExperience";
+    return "";
+  };
+
+  const validateCategory = (category) => {
+    if (!category) return "selectCategory";
+    return "";
+  };
+
+  const validateWorksWeekends = (worksWeekends) => {
+    if (!worksWeekends) return "selectAvailability";
+    return "";
+  };
+
+  const validateStep = (step, data) => {
+    switch (step) {
+      case 0:
+        return (
+          validateFullName(data.fullName) ||
+          validatePhone(data.phone) ||
+          validateWhatsapp(data.whatsapp) ||
+          validateExperienceYears(data.experienceYears)
+        );
+      case 1:
+        return validateCategory(data.category);
+      case 2:
+        return validateWorksWeekends(data.worksWeekends);
+      default:
+        return "";
+    }
+  };
+
+  // ========================
+  // Handlers
+  // ========================
   const handleChange = (name, value) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleNext = () => {
     setError("");
-    if (step === 0 && (!formData.fullName || !formData.phone)) {
-      setError(t("errors.fillRequiredFields"));
-      return;
-    }
-    if (step === 1 && !formData.category) {
-      setError(t("errors.selectCategory"));
-      return;
-    }
-    if (step === 2 && !formData.worksWeekends) {
-      setError(t("errors.selectAvailability"));
+    const stepError = validateStep(step, formData);
+    if (stepError) {
+      setError(t(`errors.${stepError}`));
       return;
     }
     setStep(step + 1);
@@ -60,6 +112,12 @@ const WorkerRegister = () => {
 
   const handleSubmit = async () => {
     setError("");
+    const stepError = validateStep(step, formData);
+    if (stepError) {
+      setError(t(`errors.${stepError}`));
+      return;
+    }
+
     setLoading(true);
     const result = await signUpWorker(formData);
     if (result.success) {
@@ -71,6 +129,9 @@ const WorkerRegister = () => {
     setLoading(false);
   };
 
+  // ========================
+  // JSX
+  // ========================
   return (
     <div
       className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-gray-100 p-4 ${
@@ -86,8 +147,14 @@ const WorkerRegister = () => {
           isRTL ? "rtl" : "ltr"
         }`}
       >
-        {error && <div className="p-3 bg-red-100 text-red-700 rounded">{error}</div>}
-        {success && <div className="p-3 bg-green-100 text-green-700 rounded">{success}</div>}
+        {error && (
+          <div className="p-3 bg-red-100 text-red-700 rounded">{error}</div>
+        )}
+        {success && (
+          <div className="p-3 bg-green-100 text-green-700 rounded">
+            {success}
+          </div>
+        )}
 
         {/* Step 0: Personal Info */}
         {step === 0 && (
@@ -99,28 +166,38 @@ const WorkerRegister = () => {
               type="text"
               placeholder={t("worker.fullName")}
               value={formData.fullName}
-              onChange={(e) => handleChange("fullName", e.target.value)}
+              onChange={(e) =>
+                handleChange("fullName", e.target.value.replace(/[^a-zA-Z\s]/g, ""))
+              }
               className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
             />
             <input
               type="tel"
               placeholder={t("worker.phone")}
               value={formData.phone}
-              onChange={(e) => handleChange("phone", e.target.value)}
+              onChange={(e) =>
+                handleChange("phone", e.target.value.replace(/[^\d+]/g, ""))
+              }
               className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
             />
             <input
               type="tel"
               placeholder={t("worker.whatsapp")}
               value={formData.whatsapp}
-              onChange={(e) => handleChange("whatsapp", e.target.value)}
+              onChange={(e) =>
+                handleChange("whatsapp", e.target.value.replace(/[^\d+]/g, ""))
+              }
               className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
             />
             <input
               type="number"
               placeholder={t("worker.experienceYears")}
               value={formData.experienceYears}
-              onChange={(e) => handleChange("experienceYears", e.target.value)}
+              onChange={(e) =>
+                handleChange("experienceYears", e.target.value.replace(/\D/g, ""))
+              }
+              min={0}
+              max={30}
               className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
             />
           </>

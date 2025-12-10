@@ -144,5 +144,28 @@
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "cookies": "Cookies"
-  }
+  },
+  "features": {
+    "title": "Pourquoi Nous Choisir",
+    "subtitle": "Des services simples, rapides et fiables pour tous.",
+    "verifiedTitle": "Travailleurs Vérifiés",
+    "verifiedDesc": "Tous les professionnels sont contrôlés et approuvés.",
+    "fastTitle": "Réservation Rapide",
+    "fastDesc": "Réservez votre service en quelques clics.",
+    "supportTitle": "Support 24/7",
+    "supportDesc": "Notre équipe est toujours disponible pour vous aider."
+  },
+  "how": {
+  "title": "Comment Ça Marche",
+  "subtitle": "Obtenez votre service en quatre étapes simples.",
+  "registerTitle": "Créer un Compte",
+  "registerDesc": "Inscrivez-vous en tant que client ou travailleur.",
+  "chooseTitle": "Choisir un Service",
+  "chooseDesc": "Sélectionnez un service ou votre disponibilité.",
+  "bookTitle": "Réserver",
+  "bookDesc": "Confirmez votre réservation en quelques secondes.",
+  "payTitle": "Paiement & Avis",
+  "payDesc": "Payez en toute sécurité et laissez votre avis."
+}
+
 }

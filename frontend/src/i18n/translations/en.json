@@ -144,5 +144,28 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "cookies": "Cookies"
-  }
+  },
+  "features": {
+    "title": "Why Choose Us",
+    "subtitle": "Simple, fast, and trusted services built for real people.",
+    "verifiedTitle": "Verified Workers",
+    "verifiedDesc": "All professionals are carefully checked and approved.",
+    "fastTitle": "Fast Booking",
+    "fastDesc": "Book your service in just a few clicks.",
+    "supportTitle": "24/7 Support",
+    "supportDesc": "Our team is always available to help you."
+  },
+  "how": {
+  "title": "How It Works",
+  "subtitle": "Get your service in four simple steps.",
+  "registerTitle": "Create an Account",
+  "registerDesc": "Register as a customer or a professional worker.",
+  "chooseTitle": "Choose a Service",
+  "chooseDesc": "Select the service or set your availability.",
+  "bookTitle": "Book Instantly",
+  "bookDesc": "Confirm your booking in seconds.",
+  "payTitle": "Payment & Feedback",
+  "payDesc": "Pay safely and leave your review."
+}
+
 }
