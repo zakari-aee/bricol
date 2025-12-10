@@ -22,37 +22,39 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <img src="/img/a.jpeg" alt="Logo" className="h-10 w-10 rounded-full" />
             <span className="text-xl font-bold text-gray-800">
-              {t('common.appName') || 'MyApp'}
+              {t('common.appName') || 'Bricol'}
             </span>
           </Link>
 
           {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
 
+            {/* Language */}
             <LanguageSwitcher />
 
+            {/* Login */}
             <Link
               to="/login"
-              className="px-5 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 font-semibold transition shadow"
+              className="px-5 py-2 bg-white border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 font-semibold shadow-sm transition"
             >
-              {t('common.login') || 'Login'}
+              {t('common.login') || 'تسجيل الدخول'}
             </Link>
 
+            {/* Signup */}
             <Link
               to="/register"
-              className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold shadow transition"
+              className="px-5 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 font-semibold shadow-md transition"
             >
-              {t('common.signup') || 'Sign Up'}
+              {t('common.signup') || 'تسجيل'}
             </Link>
           </div>
 
           {/* MOBILE BUTTON */}
-          <div className="md:hidden flex items-center space-x-3">
+          <div className="md:hidden flex items-center space-x-2">
             <LanguageSwitcher variant="simple" />
-
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-500 hover:bg-gray-100"
+              className="p-2 rounded-md text-gray-500 hover:bg-gray-100 transition"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -67,17 +69,17 @@ const Navbar = () => {
           <Link
             to="/login"
             onClick={() => setIsOpen(false)}
-            className="block text-center px-5 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 font-semibold shadow transition"
+            className="block text-center px-5 py-2 bg-white border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-100 font-semibold shadow-sm transition"
           >
-            {t('common.login') || 'Login'}
+            {t('common.login') || 'تسجيل الدخول'}
           </Link>
 
           <Link
             to="/register"
             onClick={() => setIsOpen(false)}
-            className="block text-center px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold shadow transition"
+            className="block text-center px-5 py-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 font-semibold shadow-md transition"
           >
-            {t('common.signup') || 'Sign Up'}
+            {t('common.signup') || 'تسجيل'}
           </Link>
         </div>
       )}

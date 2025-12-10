@@ -48,21 +48,21 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-gray-50"
+      className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100"
       dir={isRTL ? 'rtl' : 'ltr'}
     >
       {/* Background Shapes */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-60 animate-blob"></div>
-        <div className="absolute top-40 right-20 w-80 h-80 bg-green-100 rounded-full blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-10 left-32 w-80 h-80 bg-purple-100 rounded-full blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-80 h-80 bg-orange-200 rounded-full blur-3xl opacity-50 animate-blob"></div>
+        <div className="absolute top-40 right-20 w-80 h-80 bg-gray-200 rounded-full blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-10 left-32 w-80 h-80 bg-orange-100 rounded-full blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 pt-32 pb-40 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center mb-8 px-5 py-2 bg-blue-50 rounded-full border border-blue-200 shadow-sm">
-          <Sparkles className="h-5 w-5 text-blue-600" />
-          <span className="text-sm font-semibold text-blue-700 ml-2">
+        <div className="inline-flex items-center mb-8 px-6 py-2 bg-orange-50 rounded-full border border-orange-200 shadow-sm">
+          <Sparkles className="h-5 w-5 text-orange-500" />
+          <span className="text-sm font-semibold text-orange-600 ml-2">
             {isRTL ? 'خدمات منزلية احترافية' : 'Professional Home Services'}
           </span>
         </div>
@@ -70,13 +70,13 @@ const HeroSection = () => {
         {/* Title */}
         <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
           {t('hero.title')}
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
             {t('hero.highlighted')}
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 mb-16">
+        <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-700 mb-16">
           {isRTL
             ? 'اختر نوع العطل، اختر مدينتك، وسنجد لك أفضل حرفي'
             : 'Choose what you want to fix, select your city, and we find the best worker'}
@@ -93,7 +93,7 @@ const HeroSection = () => {
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 rounded-xl border focus:ring-2 focus:ring-blue-500 text-gray-700 shadow-sm hover:shadow-md transition`}
+                className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-400 text-gray-700 shadow-sm hover:shadow-md transition`}
               >
                 <option value="">{isRTL ? 'ماذا تريد أن تصلح؟' : 'What do you want to fix?'}</option>
                 {categories.map((cat) => (
@@ -112,7 +112,7 @@ const HeroSection = () => {
               <select
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 rounded-xl border focus:ring-2 focus:ring-blue-500 text-gray-700 shadow-sm hover:shadow-md transition`}
+                className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-400 text-gray-700 shadow-sm hover:shadow-md transition`}
               >
                 <option value="">{t('hero.city')}</option>
                 {cities.map((c, i) => (
@@ -127,7 +127,7 @@ const HeroSection = () => {
             <button
               onClick={handleSearch}
               disabled={!category || !city}
-              className="px-10 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl hover:from-blue-700 hover:to-blue-800 transition disabled:opacity-50 flex items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-105"
+              className="px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-xl hover:from-orange-600 hover:to-orange-700 transition disabled:opacity-50 flex items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-105"
             >
               {t('hero.searchNow')}
               <ChevronRight className="h-5 w-5 ml-2" />
@@ -142,10 +142,10 @@ const HeroSection = () => {
             return (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-3xl shadow border text-center transition-transform hover:-translate-y-1 hover:shadow-2xl"
+                className="bg-white p-6 rounded-3xl shadow border border-gray-200 text-center transition-transform hover:-translate-y-1 hover:shadow-2xl"
               >
-                <Icon className="h-8 w-8 mx-auto text-blue-600 mb-3" />
-                <div className="text-2xl md:text-3xl font-bold">{stat.value}</div>
+                <Icon className="h-8 w-8 mx-auto text-orange-500 mb-3" />
+                <div className="text-2xl md:text-3xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>
               </div>
             );

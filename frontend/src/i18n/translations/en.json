@@ -1,5 +1,8 @@
 {
   "common": {
+    "next": "Next",
+    "submit": "Submit",
+    "submitting": "Submitting...",
     "appName": "Bricol",
     "tagline": "Your solutions for all home repairs in Morocco",
     "search": "Search",
@@ -13,8 +16,16 @@
     "contact": "Contact",
     "about": "About",
     "back": "Back",
-    "to": "to",
-    "submitting": "Submitting..."
+    "to": "to"
+  },
+  "registration": {
+    "createAccount": "Create your account",
+    "signInToContinue": "Choose your account type to continue",
+    "customer": "Customer",
+    "customerDetails": "Provide your information so we can serve you",
+    "worker": "Worker",
+    "workerDetails": "Share your specialty and experience",
+    "haveAccount": "Already have an account?"
   },
   "nav": {
     "forWorkers": "For Workers",
@@ -102,5 +113,24 @@
     "moving": "Moving",
     "security": "Security",
     "smarthome": "Smart Home"
+  },
+  "worker": {
+    "personalInfo": "Personal Information",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "whatsapp": "WhatsApp Number",
+    "experienceYears": "Years of Experience",
+    "specialtyQuestion": "What's your specialty?",
+    "specialty": "Specialty",
+    "availabilityQuestion": "Do you prefer working on weekends or just weekdays? 😎",
+    "weekends": "Yes! I love working Saturdays and Sundays!",
+    "weekdays": "No, just weekdays (Monday to Friday)",
+    "selectCategory": "Select your specialty",
+    "fillRequiredFields": "Fill in all required fields"
+  },
+  "errors": {
+    "fillRequiredFields": "Fill all required fields",
+    "selectCategory": "Select a category",
+    "selectAvailability": "Select your availability"
   }
 }

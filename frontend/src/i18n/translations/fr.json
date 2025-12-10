@@ -1,5 +1,8 @@
 {
   "common": {
+    "next": "Suivant",
+    "submit": "Envoyer",
+    "submitting": "Envoi des données...",
     "appName": "Bricol",
     "tagline": "Vos solutions pour toutes les réparations à domicile au Maroc",
     "search": "Recherche",
@@ -13,8 +16,7 @@
     "contact": "Contactez-nous",
     "about": "À propos",
     "back": "Retour",
-    "to": "à",
-    "submitting": "Envoi..."
+    "to": "à"
   },
   "nav": {
     "forWorkers": "Pour les artisans",
@@ -102,5 +104,33 @@
     "moving": "Déménagement",
     "security": "Sécurité",
     "smarthome": "Maison intelligente"
+  },
+  "registration": {
+    "createAccount": "Créez votre compte",
+    "signInToContinue": "Choisissez votre type de compte pour continuer",
+    "customer": "Client",
+    "customerDetails": "Fournissez vos informations afin que nous puissions vous servir",
+    "worker": "Artisan",
+    "workerDetails": "Partagez votre spécialité et votre expérience",
+    "haveAccount": "Vous avez déjà un compte ?"
+  },
+  "worker": {
+    "personalInfo": "Informations personnelles",
+    "fullName": "Nom complet",
+    "phone": "Numéro de téléphone",
+    "whatsapp": "Numéro WhatsApp",
+    "experienceYears": "Années d'expérience",
+    "specialtyQuestion": "Quel est ton domaine de spécialité ?",
+    "specialty": "Spécialité",
+    "availabilityQuestion": "Tu préfères travailler le week-end ou juste en semaine ? 😎",
+    "weekends": "Oui, j'aime travailler le samedi et dimanche !",
+    "weekdays": "Non, juste les jours de la semaine (lundi à vendredi)",
+    "selectCategory": "Choisis ta spécialité",
+    "fillRequiredFields": "Remplis tous les champs obligatoires"
+  },
+  "errors": {
+    "fillRequiredFields": "Remplissez tous les champs obligatoires",
+    "selectCategory": "Sélectionnez une spécialité",
+    "selectAvailability": "Sélectionnez vos jours et heures de disponibilité"
   }
 }

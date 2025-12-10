@@ -27,20 +27,22 @@ const RegisterPage = () => {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-gray-50 flex items-center justify-center p-4"
+      className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 flex items-center justify-center p-4"
       dir={isRTL ? 'rtl' : 'ltr'}
     >
       <div className="absolute top-4 right-4">
         <LanguageSwitcher variant="simple" />
       </div>
 
-      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-8 border">
+      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-8 border border-gray-200">
         {/* Choose Account */}
         {step === 0 && (
           <div className="text-center">
-            <UserPlus className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-2">{t('auth.createAccount')}</h2>
-            <p className="text-gray-600 mb-8">{t('auth.signInToContinue')}</p>
+            <UserPlus className="h-14 w-14 text-orange-500 mx-auto mb-4" />
+            <h2 className="text-3xl font-extrabold mb-2 text-gray-800">
+              {t('registration.createAccount')}
+            </h2>
+            <p className="text-gray-500 mb-8">{t('registration.signInToContinue')}</p>
 
             <div className="grid md:grid-cols-2 gap-6">
               {/* Customer */}
@@ -49,25 +51,29 @@ const RegisterPage = () => {
                   setUserType('customer');
                   setStep(1);
                 }}
-                className="p-8 border rounded-xl hover:border-blue-500 hover:shadow-lg transition text-left"
+                className="p-8 border border-gray-200 rounded-2xl hover:border-orange-500 hover:shadow-lg transition text-left bg-white"
               >
-                <h3 className="text-xl font-bold mb-2 text-blue-600">{t('auth.customer')}</h3>
-                <p className="text-gray-600">{t('auth.customerDetails')}</p>
+                <h3 className="text-xl font-bold mb-2 text-orange-500">
+                  {t('registration.customer')}
+                </h3>
+                <p className="text-gray-600">{t('registration.customerDetails')}</p>
               </button>
 
               {/* Worker */}
               <button
-                onClick={() => navigate('/register/worker')} // ✅ Navigate to WorkerRegister
-                className="p-8 border rounded-xl hover:border-green-500 hover:shadow-lg transition text-left"
+                onClick={() => navigate('/register/worker')} 
+                className="p-8 border border-gray-200 rounded-2xl hover:border-orange-500 hover:shadow-lg transition text-left bg-white"
               >
-                <h3 className="text-xl font-bold mb-2 text-green-600">{t('auth.worker')}</h3>
-                <p className="text-gray-600">{t('auth.workerDetails')}</p>
+                <h3 className="text-xl font-bold mb-2 text-orange-500">
+                  {t('registration.worker')}
+                </h3>
+                <p className="text-gray-600">{t('registration.workerDetails')}</p>
               </button>
             </div>
 
             <div className="mt-6 text-sm text-gray-500">
-              {t('auth.haveAccount')}{' '}
-              <Link to="/login" className="text-blue-600 font-semibold">
+              {t('registration.haveAccount')}{' '}
+              <Link to="/login" className="text-orange-500 font-semibold hover:underline">
                 {t('common.login')}
               </Link>
             </div>
@@ -76,8 +82,37 @@ const RegisterPage = () => {
 
         {/* Customer form */}
         {step === 1 && (
-          <div className="text-center text-gray-600">
-            <p>{t('auth.customerFormWillBeHere')}</p>
+          <div className="mt-8 text-gray-700">
+            <h3 className="text-2xl font-bold mb-4">{t('registration.customerForm')}</h3>
+            <p className="text-gray-500 mb-6">هنا غادي يجي الفورم ديال العميل</p>
+
+            {/* Example form fields */}
+            <div className="grid gap-4 md:grid-cols-2">
+              <input
+                type="text"
+                placeholder={t('auth.fullName')}
+                className="p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
+              />
+              <input
+                type="email"
+                placeholder={t('auth.email')}
+                className="p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
+              />
+              <input
+                type="tel"
+                placeholder={t('auth.phone')}
+                className="p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
+              />
+              <input
+                type="password"
+                placeholder={t('auth.password')}
+                className="p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 outline-none text-gray-700"
+              />
+            </div>
+
+            <button className="mt-6 w-full py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-2xl hover:from-orange-600 hover:to-orange-700 transition shadow-lg hover:shadow-xl">
+              {t('common.submit')}
+            </button>
           </div>
         )}
       </div>
