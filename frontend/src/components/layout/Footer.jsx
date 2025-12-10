@@ -1,27 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTranslation from '../../hook/useTranslation';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
-    <footer className="bg-white shadow-inner mt-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center">
-        {/* Left side */}
-        <div className="text-gray-500 text-sm mb-4 md:mb-0">
-          &copy; {new Date().getFullYear()} BricolApp. All rights reserved.
+    <footer className="bg-gradient-to-br from-blue-50 via-white to-gray-50 border-t border-gray-200 shadow-inner mt-12">
+      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+
+        {/* Left: Logo & Rights */}
+        <div className="text-center md:text-left text-gray-600 text-sm">
+          &copy; {new Date().getFullYear()} {t('common.appName')}. {t('footer.rights')}.
         </div>
 
-        {/* Right side links */}
-        <div className="flex space-x-4">
-          <Link to="/about" className="text-blue-500 hover:text-blue-600 transition">
-            About
-          </Link>
-          <Link to="/contact" className="text-orange-500 hover:text-orange-600 transition">
-            Contact
-          </Link>
-          <Link to="/privacy" className="text-gray-500 hover:text-gray-700 transition">
-            Privacy
-          </Link>
+        {/* Right: Links */}
+        <div className="flex space-x-4 text-gray-600 text-sm">
+          <Link to="/about" className="hover:text-blue-600 transition">{t('common.about')}</Link>
+          <Link to="/contact" className="hover:text-blue-600 transition">{t('common.contact')}</Link>
+          <Link to="/privacy" className="hover:text-blue-600 transition">{t('footer.privacy')}</Link>
+          <Link to="/terms" className="hover:text-blue-600 transition">{t('footer.terms')}</Link>
         </div>
+
       </div>
     </footer>
   );

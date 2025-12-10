@@ -1,195 +1,155 @@
 import React, { useState } from 'react';
-import { Search, MapPin, ChevronRight, PlayCircle, Star, CheckCircle, Shield, Clock, Users, Sparkles } from 'lucide-react';
+import {
+  Wrench,
+  MapPin,
+  ChevronRight,
+  Sparkles,
+  Users,
+  Shield,
+  Clock,
+  CheckCircle,
+} from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import useTranslation from '../../hook/useTranslation';
 
 const HeroSection = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState('services');
   const { isRTL } = useLanguage();
   const { t } = useTranslation();
 
-  const popularServices = [
-    { name: t('services.electrical'), icon: "⚡", color: "yellow" },
-    { name: t('services.plumbing'), icon: "💧", color: "blue" },
-    { name: t('services.carpentry'), icon: "🔨", color: "brown" },
-    { name: t('services.painting'), icon: "🎨", color: "purple" },
-    { name: t('services.ac'), icon: "❄️", color: "cyan" },
-    { name: t('services.furniture'), icon: "🛋️", color: "green" },
+  const [category, setCategory] = useState('');
+  const [city, setCity] = useState('');
+
+  const categories = [
+    { label: `⚡ ${t('services.electrical')}`, value: 'electrical' },
+    { label: `🚿 ${t('services.plumbing')}`, value: 'plumbing' },
+    { label: `🪚 ${t('services.carpentry')}`, value: 'carpentry' },
+    { label: `🎨 ${t('services.painting')}`, value: 'painting' },
+    { label: `❄️ ${t('services.ac')}`, value: 'ac' },
+    { label: `🚚 ${t('services.furniture')}`, value: 'furniture' },
+    { label: `🧹 ${t('services.cleaning')}`, value: 'cleaning' },
+    { label: `🛠️ ${t('services.installation')}`, value: 'installation' },
   ];
 
-  const cities = isRTL 
-    ? ["الدار البيضاء", "الرباط", "مراكش", "طنجة", "فاس", "أكادير", "مكناس", "وجدة"]
-    : ["Casablanca", "Rabat", "Marrakech", "Tanger", "Fès", "Agadir", "Meknès", "Oujda"];
+  const cities = isRTL
+    ? ['الدار البيضاء', 'الرباط', 'مراكش', 'طنجة', 'فاس', 'أكادير', 'مكناس', 'وجدة']
+    : ['Casablanca', 'Rabat', 'Marrakech', 'Tanger', 'Fès', 'Agadir', 'Meknès', 'Oujda'];
 
   const stats = [
-    { value: "10,000+", label: t('stats.workers'), icon: Users, color: "blue" },
-    { value: "98%", label: t('stats.satisfaction'), icon: CheckCircle, color: "green" },
-    { value: isRTL ? "30 دقيقة" : "30 min", label: t('stats.responseTime'), icon: Clock, color: "orange" },
-    { value: isRTL ? "مضمون" : "Garanti", label: t('stats.guarantee'), icon: Shield, color: "purple" },
+    { value: '10,000+', label: t('stats.workers'), icon: Users },
+    { value: '98%', label: t('stats.satisfaction'), icon: CheckCircle },
+    { value: isRTL ? '30 دقيقة' : '30 min', label: t('stats.responseTime'), icon: Clock },
+    { value: isRTL ? 'مضمون' : 'Garanti', label: t('stats.guarantee'), icon: Shield },
   ];
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/customer/search?q=${encodeURIComponent(searchQuery)}`;
-    }
+  const handleSearch = () => {
+    if (!category || !city) return;
+    window.location.href = `/customer/search?category=${category}&city=${city}`;
   };
 
   return (
-    <section 
+    <section
       className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-gray-50"
       dir={isRTL ? 'rtl' : 'ltr'}
     >
-      {/* Background Blobs */}
+      {/* Background Shapes */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-40 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-60 animate-blob"></div>
+        <div className="absolute top-40 right-20 w-80 h-80 bg-green-100 rounded-full blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-10 left-32 w-80 h-80 bg-purple-100 rounded-full blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32 md:pt-32 md:pb-48">
-        <div className={`text-center lg:text-left ${isRTL ? 'lg:text-right' : ''}`}>
-          
-          {/* Badge */}
-          <div className={`inline-flex items-center mb-8 px-4 py-2 bg-blue-50 rounded-full border border-blue-200 ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
-            <Sparkles className="h-4 w-4 text-blue-600" />
-            <span className="text-sm font-medium text-blue-700">
-              {isRTL ? '💡 اكتشف مساعدنا الذكي BricoBot' : '💡 Découvrez notre assistant IA BricoBot'}
-            </span>
-            <ChevronRight className="h-4 w-4 text-blue-500" />
-          </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 pt-32 pb-40 text-center">
+        {/* Badge */}
+        <div className="inline-flex items-center mb-8 px-5 py-2 bg-blue-50 rounded-full border border-blue-200 shadow-sm">
+          <Sparkles className="h-5 w-5 text-blue-600" />
+          <span className="text-sm font-semibold text-blue-700 ml-2">
+            {isRTL ? 'خدمات منزلية احترافية' : 'Professional Home Services'}
+          </span>
+        </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            <span className="block">{t('hero.title')}</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">
-              {t('hero.highlighted')}
-            </span>
-          </h1>
+        {/* Title */}
+        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
+          {t('hero.title')}
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">
+            {t('hero.highlighted')}
+          </span>
+        </h1>
 
-          {/* Subtitle */}
-          <p className="mt-4 sm:mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-gray-600 leading-relaxed">
-            {t('hero.subtitle')}
-            <span className="font-semibold text-gray-800"> {t('hero.services')}</span>
-            {isRTL ? ' – كل ما يحتاجه منزلك في مكان واحد.' : ' – tout ce dont votre maison a besoin en un seul endroit.'}
-          </p>
+        {/* Subtitle */}
+        <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 mb-16">
+          {isRTL
+            ? 'اختر نوع العطل، اختر مدينتك، وسنجد لك أفضل حرفي'
+            : 'Choose what you want to fix, select your city, and we find the best worker'}
+        </p>
 
-          {/* Search / Tabs */}
-          <div className="mt-12 max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-4 md:p-6 border border-gray-200">
-            
-            {/* Tabs */}
-            <div className="flex mb-4 border-b border-gray-100 rounded-t-xl overflow-hidden">
-              <button
-                onClick={() => setActiveTab('services')}
-                className={`flex-1 py-3 px-4 text-center font-medium transition ${activeTab === 'services'
-                  ? 'bg-blue-50 text-blue-600 border-b-2 border-blue-500'
-                  : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                }`}
+        {/* Search Form */}
+        <div className="bg-white max-w-4xl mx-auto rounded-3xl shadow-xl p-6 md:p-8 border border-gray-200 transition-transform hover:-translate-y-1 hover:shadow-2xl">
+          <div className="flex flex-col md:flex-row gap-4">
+            {/* Category */}
+            <div className="relative flex-1">
+              <Wrench
+                className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`}
+              />
+              <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 rounded-xl border focus:ring-2 focus:ring-blue-500 text-gray-700 shadow-sm hover:shadow-md transition`}
               >
-                🔍 {isRTL ? 'ابحث عن خدمة' : 'Trouver un service'}
-              </button>
-              <button
-                onClick={() => setActiveTab('workers')}
-                className={`flex-1 py-3 px-4 text-center font-medium transition ${activeTab === 'workers'
-                  ? 'bg-green-50 text-green-600 border-b-2 border-green-500'
-                  : 'text-gray-500 hover:text-gray-700 hover:bg-green-50'
-                }`}
-              >
-                👷 {t('hero.joinAsWorker')}
-              </button>
+                <option value="">{isRTL ? 'ماذا تريد أن تصلح؟' : 'What do you want to fix?'}</option>
+                {categories.map((cat) => (
+                  <option key={cat.value} value={cat.value}>
+                    {cat.label}
+                  </option>
+                ))}
+              </select>
             </div>
 
-            {/* Search Form */}
-            <form onSubmit={handleSearch} className="mt-4 md:mt-6">
-              <div className={`flex flex-col md:flex-row gap-3 ${isRTL ? 'space-x-reverse' : ''}`}>
-                
-                {/* Search Input */}
-                <div className="flex-1 relative">
-                  <Search className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`} />
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder={t('hero.searchPlaceholder')}
-                    className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 text-lg border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                  />
-                </div>
+            {/* City */}
+            <div className="relative flex-1">
+              <MapPin
+                className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`}
+              />
+              <select
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 rounded-xl border focus:ring-2 focus:ring-blue-500 text-gray-700 shadow-sm hover:shadow-md transition`}
+              >
+                <option value="">{t('hero.city')}</option>
+                {cities.map((c, i) => (
+                  <option key={i} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-                {/* City Select */}
-                <div className="md:w-64 relative">
-                  <MapPin className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`} />
-                  <select className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 text-lg border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white appearance-none`}>
-                    <option value="">{t('hero.city')}</option>
-                    {cities.map((city, index) => (
-                      <option key={index} value={city}>{city}</option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Search Button */}
-                <button
-                  type="submit"
-                  className={`md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl hover:from-blue-700 hover:to-blue-800 transition transform hover:scale-105 shadow-lg flex items-center justify-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}
-                >
-                  <span>{t('hero.searchNow')}</span>
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-              </div>
-
-              {/* Popular Services */}
-              <div className="mt-6 pt-6 border-t border-gray-100">
-                <p className="text-gray-500 mb-3 text-center md:text-left">{t('hero.popularServices')}:</p>
-                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                  {popularServices.map((service, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setSearchQuery(service.name)}
-                      className={`flex items-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'} px-4 py-2 rounded-full border transition hover:scale-105 ${
-                        service.color === 'blue' ? 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100' :
-                        service.color === 'yellow' ? 'bg-yellow-50 border-yellow-200 text-yellow-700 hover:bg-yellow-100' :
-                        service.color === 'purple' ? 'bg-purple-50 border-purple-200 text-purple-700 hover:bg-purple-100' :
-                        'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100'
-                      }`}
-                    >
-                      <span className="text-xl">{service.icon}</span>
-                      <span className="font-medium">{service.name}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </form>
-          </div>
-
-          {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {stats.map((stat, idx) => {
-              const Icon = stat.icon;
-              return (
-                <div key={idx} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition">
-                  <div className="flex justify-center mb-3">
-                    <Icon className={`h-8 w-8 text-${stat.color}-600`} />
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-gray-600 mt-1">{stat.label}</div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className={`mt-12 flex flex-col sm:flex-row gap-4 justify-center md:justify-start ${isRTL ? 'space-x-reverse' : ''}`}>
-            <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-xl hover:from-green-600 hover:to-emerald-700 transition transform hover:scale-105 shadow-lg flex items-center justify-center">
-              <PlayCircle className="h-5 w-5" />
-              <span>{t('hero.watchDemo')}</span>
-            </button>
-            
-            <button className="px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition transform hover:scale-105 shadow-lg flex items-center justify-center">
-              <Star className="h-5 w-5" />
-              <span>{t('hero.getOffer')}</span>
+            {/* Search Button */}
+            <button
+              onClick={handleSearch}
+              disabled={!category || !city}
+              className="px-10 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl hover:from-blue-700 hover:to-blue-800 transition disabled:opacity-50 flex items-center justify-center shadow-lg hover:shadow-2xl transform hover:scale-105"
+            >
+              {t('hero.searchNow')}
+              <ChevronRight className="h-5 w-5 ml-2" />
             </button>
           </div>
+        </div>
 
+        {/* Trust Stats */}
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {stats.map((stat, idx) => {
+            const Icon = stat.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-3xl shadow border text-center transition-transform hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <Icon className="h-8 w-8 mx-auto text-blue-600 mb-3" />
+                <div className="text-2xl md:text-3xl font-bold">{stat.value}</div>
+                <div className="text-gray-600 text-sm">{stat.label}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

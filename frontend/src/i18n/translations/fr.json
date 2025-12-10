@@ -1,83 +1,64 @@
 {
   "common": {
     "appName": "Bricol",
-    "tagline": "Votre solution pour toutes les réparations domestiques au Maroc",
-    "search": "Rechercher",
+    "tagline": "Vos solutions pour toutes les réparations à domicile au Maroc",
+    "search": "Recherche",
     "login": "Connexion",
-    "signup": "S'inscrire",
+    "signup": "Inscription",
     "dashboard": "Tableau de bord",
     "profile": "Profil",
     "settings": "Paramètres",
     "logout": "Déconnexion",
     "help": "Aide",
-    "contact": "Contact",
-    "about": "À propos"
+    "contact": "Contactez-nous",
+    "about": "À propos",
+    "back": "Retour",
+    "to": "à",
+    "submitting": "Envoi..."
   },
-  
   "nav": {
-    "forWorkers": "Pour les Artisans",
-    "forCustomers": "Pour les Clients",
+    "forWorkers": "Pour les artisans",
+    "forCustomers": "Pour les clients",
     "services": "Services",
     "howItWorks": "Comment ça marche",
     "pricing": "Tarifs",
     "blog": "Blog"
   },
-  
   "hero": {
-    "title": "Réparations domestiques",
-    "highlighted": "en toute confiance et professionnalisme",
+    "title": "Réparations à domicile",
+    "highlighted": "Avec confiance et professionnalisme",
     "subtitle": "Connectez-vous avec les meilleurs artisans et techniciens certifiés au Maroc.",
-    "services": "Réparation, Installation, Maintenance",
-    "searchPlaceholder": "Que voulez-vous réparer ? (ex : fuite d'eau, installation climatiseur, peinture...)",
+    "services": "Réparation, installation, maintenance",
+    "searchPlaceholder": "Que voulez-vous réparer ? (Ex: fuite d’eau, installer un climatiseur, déco murale...)",
     "city": "Ville",
-    "searchNow": "Rechercher maintenant",
-    "popularServices": "Services populaires",
-    "joinAsWorker": "Rejoindre en tant qu'artisan",
-    "watchDemo": "🎬 Voir comment Bricol fonctionne",
-    "getOffer": "⭐ Obtenir une offre spéciale"
+    "searchNow": "Rechercher",
+    "popularServices": "Services les plus populaires",
+    "joinAsWorker": "Rejoindre en tant qu’artisan",
+    "watchDemo": "🎬 Voir la démo",
+    "getOffer": "⭐ Obtenez une offre spéciale"
   },
-  
   "stats": {
     "workers": "Artisans certifiés",
-    "satisfaction": "Satisfaction clients",
+    "satisfaction": "Satisfaction client",
     "responseTime": "Temps de réponse moyen",
     "guarantee": "Garantie 30 jours"
   },
-  
   "services": {
     "electrical": "Électricité",
     "plumbing": "Plomberie",
     "carpentry": "Menuiserie",
     "painting": "Peinture",
     "ac": "Climatisation",
-    "furniture": "Meubles"
+    "furniture": "Déménagement",
+    "cleaning": "Nettoyage",
+    "installation": "Installation"
   },
-  
-  "ai": {
-    "assistant": "Assistant IA",
-    "chatTitle": "BricoBot Assistant",
-    "chatSubtitle": "Votre assistant intelligent pour les réparations",
-    "welcome": "Bonjour ! Je suis BricoBot, l'assistant intelligent. Pouvez-vous décrire le problème que vous rencontrez chez vous ?",
-    "typeHere": "Décrivez votre problème en détail ou téléchargez une photo...",
-    "quickReplies": [
-      "Problème électrique",
-      "Fuite d'eau",
-      "Montage meubles",
-      "Peinture murale",
-      "Réparation climatiseur"
-    ],
-    "send": "Envoyer",
-    "uploadPhoto": "Télécharger photo",
-    "voiceInput": "Entrée vocale",
-    "emergency": "🚨 Urgence - Appeler maintenant"
-  },
-  
   "auth": {
-    "email": "E-mail",
+    "email": "Email",
     "password": "Mot de passe",
     "forgotPassword": "Mot de passe oublié ?",
     "noAccount": "Pas de compte ?",
-    "haveAccount": "Déjà un compte ?",
+    "haveAccount": "Vous avez un compte ?",
     "customer": "Client",
     "worker": "Artisan",
     "fullName": "Nom complet",
@@ -87,19 +68,39 @@
     "specialty": "Spécialité",
     "next": "Suivant",
     "previous": "Précédent",
-    "submit": "Soumettre"
+    "submit": "Envoyer",
+    "personalInfo": "Informations personnelles",
+    "availability": "Disponibilité",
+    "selectCategory": "Choisir une catégorie",
+    "fillRequiredFields": "Remplissez tous les champs obligatoires"
   },
-  
-  "footer": {
-    "description": "La plateforme de confiance pour tous vos besoins de réparation domestique au Maroc.",
-    "quickLinks": "Liens rapides",
-    "services": "Services",
-    "cities": "Villes",
-    "legal": "Légal",
-    "contactInfo": "Contact",
-    "rights": "Tous droits réservés",
-    "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation",
-    "cookies": "Cookies"
+  "days": {
+    "Monday": "Lundi",
+    "Tuesday": "Mardi",
+    "Wednesday": "Mercredi",
+    "Thursday": "Jeudi",
+    "Friday": "Vendredi",
+    "Saturday": "Samedi",
+    "Sunday": "Dimanche"
+  },
+  "buttons": {
+    "getStarted": "Commencer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "submit": "Envoyer"
+  },
+  "categories": {
+    "electrical": "Électricité",
+    "plumbing": "Plomberie",
+    "carpentry": "Menuiserie",
+    "painting": "Peinture",
+    "ac": "Climatisation",
+    "furniture": "Déménagement",
+    "appliance": "Réparation appareils",
+    "cleaning": "Nettoyage",
+    "gardening": "Jardinage",
+    "moving": "Déménagement",
+    "security": "Sécurité",
+    "smarthome": "Maison intelligente"
   }
 }

@@ -11,6 +11,7 @@ import Footer from './components/layout/Footer';
 // Pages
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
+import WorkerRegister from './pages/auth/WorkerRegister';
 import HomePage from './pages/customer/Home';
 import HeroSection from './components/layout/HeroSection';
 
@@ -28,13 +29,22 @@ function App() {
               <Route path="/" element={<HeroSection />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/register/worker" element={<WorkerRegister />} /> {/* Worker signup */}
 
-              {/* Example Protected Route */}
+              {/* Example Protected Routes */}
               <Route
-                path="/dashboard"
+                path="/customer/dashboard"
                 element={
                   <ProtectedRoute>
-                    <h1 className="text-2xl p-4">Dashboard (Protected)</h1>
+                    <HomePage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/worker/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <h1 className="text-2xl p-4">Worker Dashboard</h1>
                   </ProtectedRoute>
                 }
               />
