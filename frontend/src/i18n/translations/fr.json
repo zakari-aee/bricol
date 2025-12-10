@@ -156,16 +156,15 @@
     "supportDesc": "Notre équipe est toujours disponible pour vous aider."
   },
   "how": {
-  "title": "Comment Ça Marche",
-  "subtitle": "Obtenez votre service en quatre étapes simples.",
-  "registerTitle": "Créer un Compte",
-  "registerDesc": "Inscrivez-vous en tant que client ou travailleur.",
-  "chooseTitle": "Choisir un Service",
-  "chooseDesc": "Sélectionnez un service ou votre disponibilité.",
-  "bookTitle": "Réserver",
-  "bookDesc": "Confirmez votre réservation en quelques secondes.",
-  "payTitle": "Paiement & Avis",
-  "payDesc": "Payez en toute sécurité et laissez votre avis."
-}
-
+    "title": "Comment ça marche",
+    "subtitle": "Des étapes simples pour obtenir votre service",
+    "registerTitle": "Créer un compte",
+    "registerDesc": "Inscrivez-vous comme client ou travailleur",
+    "chooseTitle": "Choisir un service",
+    "chooseDesc": "Sélectionnez le service souhaité",
+    "bookTitle": "Réservation rapide",
+    "bookDesc": "Confirmez en quelques secondes",
+    "feedbackTitle": "Évaluer le service",
+    "feedbackDesc": "Laissez un avis après la fin"
+  }
 }

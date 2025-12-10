@@ -156,16 +156,15 @@
     "supportDesc": "Our team is always available to help you."
   },
   "how": {
-  "title": "How It Works",
-  "subtitle": "Get your service in four simple steps.",
-  "registerTitle": "Create an Account",
-  "registerDesc": "Register as a customer or a professional worker.",
-  "chooseTitle": "Choose a Service",
-  "chooseDesc": "Select the service or set your availability.",
-  "bookTitle": "Book Instantly",
-  "bookDesc": "Confirm your booking in seconds.",
-  "payTitle": "Payment & Feedback",
-  "payDesc": "Pay safely and leave your review."
-}
-
+    "title": "How It Works",
+    "subtitle": "Simple steps to get your service done",
+    "registerTitle": "Create Account",
+    "registerDesc": "Sign up as a customer or a worker",
+    "chooseTitle": "Choose Service",
+    "chooseDesc": "Select the service you need",
+    "bookTitle": "Book Instantly",
+    "bookDesc": "Confirm your booking in seconds",
+    "feedbackTitle": "Rate the Service",
+    "feedbackDesc": "Leave feedback after completion"
+  }
 }

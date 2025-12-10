@@ -11,9 +11,7 @@ import Footer from './components/layout/Footer';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import WorkerRegister from './pages/auth/WorkerRegister';
-import HeroSection from './components/layout/HeroSection';
-import FeaturesSection from './components/layout/FeaturesSection';
-import HowItWorksSection from './components/layout/HowItWorksSection';
+import Home from './pages/customer/Home';
 
 function App() {
   return (
@@ -25,15 +23,13 @@ function App() {
           {/* Main content */}
           <main className="flex-1 bg-transparent">
             <Routes>
-              <Route path="/" element={<HeroSection />} />
+              <Route path="/" element={<Home />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/register/worker" element={<WorkerRegister />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
-          <FeaturesSection />
-          <HowItWorksSection />
 
           <Footer />
         </div>

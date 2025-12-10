@@ -25,44 +25,35 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section
-      className="w-full py-24 bg-gradient-to-b from-gray-50 to-white"
-      dir={isRTL ? "rtl" : "ltr"}
-    >
+    <section className="w-full py-24" dir={isRTL ? "rtl" : "ltr"}>
       <div className="max-w-7xl mx-auto px-6 text-center">
 
-        {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-3">
           {t("features.title")}
         </h2>
 
-        <p className="text-gray-600 max-w-2xl mx-auto mb-16 text-lg">
+        <p className="text-gray-600 max-w-2xl mx-auto mb-14">
           {t("features.subtitle")}
         </p>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((item, i) => {
+            const Icon = item.icon;
             return (
               <div
-                key={index}
-                className="bg-white p-10 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl transition"
+                key={i}
+                className="backdrop-blur-xl bg-white/70 p-8 rounded-2xl border border-gray-200 shadow-xl transition-transform hover:-translate-y-1 hover:shadow-2xl"
               >
-                <Icon className="w-10 h-10 text-orange-500 mx-auto mb-6" />
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {feature.title}
+                <Icon className="w-10 h-10 text-orange-500 mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {item.title}
                 </h3>
-
-                <p className="text-gray-600 text-base">
-                  {feature.desc}
+                <p className="text-sm text-gray-600">
+                  {item.desc}
                 </p>
               </div>
             );
           })}
-
         </div>
       </div>
     </section>
