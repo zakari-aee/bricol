@@ -132,5 +132,17 @@
     "fillRequiredFields": "Fill all required fields",
     "selectCategory": "Select a category",
     "selectAvailability": "Select your availability"
+  },
+  "footer": {
+    "description": "The trusted platform for all home repair services in Morocco.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "cities": "Cities",
+    "legal": "Legal",
+    "contactInfo": "Contact Info",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "cookies": "Cookies"
   }
 }

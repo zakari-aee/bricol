@@ -24,7 +24,6 @@ const LoginPage = () => {
     const result = await login(identifier, password);
 
     if (result.success) {
-      // Redirect based on user type
       navigate(result.userType === 'worker' ? '/worker/dashboard' : '/customer/dashboard');
     } else {
       setError(result.error || t('auth.loginError'));
@@ -34,21 +33,21 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-gray-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-orange-50 to-gray-50 p-4">
       <div className="absolute top-4 right-4">
         <LanguageSwitcher variant="simple" />
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg border space-y-4"
+        className="w-full max-w-md bg-white p-8 rounded-3xl shadow-xl border border-gray-200 space-y-4"
       >
         <div className="flex items-center mb-4">
-          <LogIn className="h-6 w-6 text-blue-600 mr-2" />
-          <h2 className="text-2xl font-bold">{t('common.login')}</h2>
+          <LogIn className="h-6 w-6 text-orange-500 mr-2" />
+          <h2 className="text-2xl font-bold text-gray-800">{t('common.login')}</h2>
         </div>
 
-        {error && <div className="p-3 bg-red-100 text-red-700 rounded">{error}</div>}
+        {error && <div className="p-3 bg-red-100 text-red-700 rounded-lg">{error}</div>}
 
         {/* Identifier */}
         <input
@@ -56,7 +55,7 @@ const LoginPage = () => {
           placeholder="Email or Phone"
           value={identifier}
           onChange={(e) => setIdentifier(e.target.value)}
-          className="w-full p-3 border rounded-lg"
+          className="w-full p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition text-gray-700"
           required
         />
 
@@ -67,13 +66,13 @@ const LoginPage = () => {
             placeholder={t('auth.password')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-3 border rounded-lg pr-10"
+            className="w-full p-3 border border-gray-300 rounded-xl shadow-sm focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition text-gray-700 pr-10"
             required
           />
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-3 top-1/2 -translate-y-1/2"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition"
           >
             {showPassword ? <EyeOff /> : <Eye />}
           </button>
@@ -82,7 +81,7 @@ const LoginPage = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700"
+          className="w-full py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-bold shadow-md hover:from-orange-600 hover:to-orange-700 transition disabled:opacity-50"
         >
           {loading ? t('auth.signingIn') : t('common.login')}
         </button>

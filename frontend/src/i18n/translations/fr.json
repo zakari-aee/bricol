@@ -132,5 +132,17 @@
     "fillRequiredFields": "Remplissez tous les champs obligatoires",
     "selectCategory": "Sélectionnez une spécialité",
     "selectAvailability": "Sélectionnez vos jours et heures de disponibilité"
+  },
+  "footer": {
+    "description": "La plateforme de confiance pour tous les services de réparation à domicile au Maroc.",
+    "quickLinks": "Liens rapides",
+    "services": "Services",
+    "cities": "Villes",
+    "legal": "Légal",
+    "contactInfo": "Contactez-nous",
+    "rights": "Tous droits réservés",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Cookies"
   }
 }

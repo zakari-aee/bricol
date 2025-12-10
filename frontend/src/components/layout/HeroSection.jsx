@@ -18,6 +18,8 @@ const HeroSection = () => {
 
   const [category, setCategory] = useState('');
   const [city, setCity] = useState('');
+  const [citySearch, setCitySearch] = useState('');
+  const [showCityDropdown, setShowCityDropdown] = useState(false);
 
   const categories = [
     { label: `⚡ ${t('services.electrical')}`, value: 'electrical' },
@@ -30,9 +32,21 @@ const HeroSection = () => {
     { label: `🛠️ ${t('services.installation')}`, value: 'installation' },
   ];
 
-  const cities = isRTL
-    ? ['الدار البيضاء', 'الرباط', 'مراكش', 'طنجة', 'فاس', 'أكادير', 'مكناس', 'وجدة']
-    : ['Casablanca', 'Rabat', 'Marrakech', 'Tanger', 'Fès', 'Agadir', 'Meknès', 'Oujda'];
+  const allCities = isRTL
+    ? [
+        'الدار البيضاء', 'الرباط', 'مراكش', 'طنجة', 'فاس', 'أكادير',
+        'مكناس', 'وجدة', 'سطات', 'سلا', 'بن سليمان', 'تمارة',
+        'الخميسات', 'الصويرة', 'العرائش', 'جرادة'
+      ]
+    : [
+        'Casablanca', 'Rabat', 'Marrakech', 'Tanger', 'Fès', 'Agadir',
+        'Meknès', 'Oujda', 'Settat', 'Salé', 'Ben Slimane', 'Temara',
+        'Khemisset', 'Essaouira', 'Larache', 'Jerada'
+      ];
+
+  const filteredCities = allCities.filter(c =>
+    c.toLowerCase().includes(citySearch.toLowerCase())
+  );
 
   const stats = [
     { value: '10,000+', label: t('stats.workers'), icon: Users },
@@ -87,9 +101,7 @@ const HeroSection = () => {
           <div className="flex flex-col md:flex-row gap-4">
             {/* Category */}
             <div className="relative flex-1">
-              <Wrench
-                className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`}
-              />
+              <Wrench className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`} />
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
@@ -97,30 +109,38 @@ const HeroSection = () => {
               >
                 <option value="">{isRTL ? 'ماذا تريد أن تصلح؟' : 'What do you want to fix?'}</option>
                 {categories.map((cat) => (
-                  <option key={cat.value} value={cat.value}>
-                    {cat.label}
-                  </option>
+                  <option key={cat.value} value={cat.value}>{cat.label}</option>
                 ))}
               </select>
             </div>
 
-            {/* City */}
+            {/* City (searchable) */}
             <div className="relative flex-1">
-              <MapPin
-                className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`}
-              />
-              <select
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
+              <MapPin className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400`} />
+              <input
+                type="text"
+                value={citySearch}
+                placeholder={t('hero.city')}
+                onChange={(e) => {
+                  setCitySearch(e.target.value);
+                  setShowCityDropdown(true);
+                }}
+                onFocus={() => setShowCityDropdown(true)}
                 className={`w-full ${isRTL ? 'pr-12 pl-4' : 'pl-12 pr-4'} py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-400 text-gray-700 shadow-sm hover:shadow-md transition`}
-              >
-                <option value="">{t('hero.city')}</option>
-                {cities.map((c, i) => (
-                  <option key={i} value={c}>
-                    {c}
-                  </option>
-                ))}
-              </select>
+              />
+              {showCityDropdown && filteredCities.length > 0 && (
+                <ul className="absolute z-20 left-0 right-0 mt-1 max-h-40 overflow-y-auto bg-white border border-gray-300 rounded-xl shadow-lg text-left">
+                  {filteredCities.map((c, i) => (
+                    <li
+                      key={i}
+                      onClick={() => { setCity(c); setCitySearch(c); setShowCityDropdown(false); }}
+                      className="px-4 py-2 cursor-pointer hover:bg-orange-100"
+                    >
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             {/* Search Button */}
@@ -140,10 +160,7 @@ const HeroSection = () => {
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded-3xl shadow border border-gray-200 text-center transition-transform hover:-translate-y-1 hover:shadow-2xl"
-              >
+              <div key={idx} className="bg-white p-6 rounded-3xl shadow border border-gray-200 text-center transition-transform hover:-translate-y-1 hover:shadow-2xl">
                 <Icon className="h-8 w-8 mx-auto text-orange-500 mb-3" />
                 <div className="text-2xl md:text-3xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>

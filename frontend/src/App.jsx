@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { LanguageProvider } from './context/LanguageContext';
-import ProtectedRoute from './components/auth/ProtectedRoute';
 
 // Layout Components
 import Navbar from './components/layout/Navbar';
@@ -12,47 +11,25 @@ import Footer from './components/layout/Footer';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import WorkerRegister from './pages/auth/WorkerRegister';
-import HomePage from './pages/customer/Home';
 import HeroSection from './components/layout/HeroSection';
 
 function App() {
   return (
     <LanguageProvider>
       <AuthProvider>
-        <div className="min-h-screen bg-gray-50 flex flex-col">
+        <div className="flex flex-col min-h-screen bg-transparent">
           <Navbar />
 
           {/* Main content */}
-          <div className="flex-1">
+          <main className="flex-1 bg-transparent">
             <Routes>
-              {/* Public Routes */}
               <Route path="/" element={<HeroSection />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
-              <Route path="/register/worker" element={<WorkerRegister />} /> {/* Worker signup */}
-
-              {/* Example Protected Routes */}
-              <Route
-                path="/customer/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <HomePage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/worker/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <h1 className="text-2xl p-4">Worker Dashboard</h1>
-                  </ProtectedRoute>
-                }
-              />
-
-              {/* Catch all */}
+              <Route path="/register/worker" element={<WorkerRegister />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
-          </div>
+          </main>
 
           <Footer />
         </div>
