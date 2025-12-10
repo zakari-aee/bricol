@@ -1,5 +1,5 @@
 import { useLanguage } from '../context/LanguageContext';
-import { t as translate } from '../i18n';
+import { t as translate } from '../i18n/indexx';
 
 const useTranslation = () => {
   const { language } = useLanguage();

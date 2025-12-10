@@ -18,12 +18,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
 
-          {/* LOGO */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img src="/img/a.jpeg" alt="Logo" className="h-10 w-10 rounded-full" />
-            <span className="text-xl font-bold text-gray-800">
-              {t('common.appName') || 'Bricol'}
-            </span>
+          {/* LOGO as text */}
+          <Link to="/" className="text-2xl font-extrabold text-orange-500 tracking-wider">
+            {t('common.appName') || 'Bricol'}
           </Link>
 
           {/* DESKTOP MENU */}

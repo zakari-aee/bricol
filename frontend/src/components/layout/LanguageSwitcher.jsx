@@ -1,7 +1,7 @@
 import React from 'react';
 import { Globe, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import { getSupportedLanguages } from '../../i18n';
+import { getSupportedLanguages } from '../../i18n/indexx';
 
 const LanguageSwitcher = ({ variant = 'dropdown' }) => {
   const { language, changeLanguage } = useLanguage();
