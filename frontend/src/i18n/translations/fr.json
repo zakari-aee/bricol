@@ -2,10 +2,10 @@
   "common": {
     "next": "Suivant",
     "submit": "Envoyer",
-    "submitting": "Envoi des données...",
+    "submitting": "Envoi...",
     "appName": "Bricol",
-    "tagline": "Vos solutions pour toutes les réparations à domicile au Maroc",
-    "search": "Recherche",
+    "tagline": "Vos solutions pour tous les travaux de maison au Maroc",
+    "search": "Rechercher",
     "login": "Connexion",
     "signup": "Inscription",
     "dashboard": "Tableau de bord",
@@ -13,11 +13,23 @@
     "settings": "Paramètres",
     "logout": "Déconnexion",
     "help": "Aide",
-    "contact": "Contactez-nous",
+    "contact": "Contact",
     "about": "À propos",
     "back": "Retour",
     "to": "à"
   },
+
+  "registration": {
+    "createAccount": "Créer votre compte",
+    "signInToContinue": "Choisissez votre type de compte pour continuer",
+    "customer": "Client",
+    "customerDetails": "Fournissez vos informations pour mieux vous servir",
+    "worker": "Artisan",
+    "workerDetails": "Partagez votre spécialité et votre expérience",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "customerForm": "Créer un compte client"
+  },
+
   "nav": {
     "forWorkers": "Pour les artisans",
     "forCustomers": "Pour les clients",
@@ -26,38 +38,44 @@
     "pricing": "Tarifs",
     "blog": "Blog"
   },
+
   "hero": {
     "title": "Réparations à domicile",
     "highlighted": "Avec confiance et professionnalisme",
-    "subtitle": "Connectez-vous avec les meilleurs artisans et techniciens certifiés au Maroc.",
-    "services": "Réparation, installation, maintenance",
-    "searchPlaceholder": "Que voulez-vous réparer ? (Ex: fuite d’eau, installer un climatiseur, déco murale...)",
+    "subtitle": "Connectez-vous avec les meilleurs artisans certifiés au Maroc.",
+    "services": "Réparation, Installation, Maintenance",
+    "searchPlaceholder": "Que voulez-vous réparer ? (Ex : fuite d’eau, climatisation...)",
     "city": "Ville",
     "searchNow": "Rechercher",
-    "popularServices": "Services les plus populaires",
-    "joinAsWorker": "Rejoindre en tant qu’artisan",
+    "popularServices": "Services populaires",
+    "joinAsWorker": "Rejoindre comme artisan",
     "watchDemo": "🎬 Voir la démo",
-    "getOffer": "⭐ Obtenez une offre spéciale"
+    "getOffer": "⭐ Obtenir une offre spéciale"
   },
+
   "stats": {
     "workers": "Artisans certifiés",
     "satisfaction": "Satisfaction client",
     "responseTime": "Temps de réponse moyen",
     "guarantee": "Garantie 30 jours"
   },
+
   "services": {
     "electrical": "Électricité",
     "plumbing": "Plomberie",
     "carpentry": "Menuiserie",
     "painting": "Peinture",
     "ac": "Climatisation",
-    "furniture": "Déménagement",
+    "furniture": "Déménagement de meubles",
     "cleaning": "Nettoyage",
     "installation": "Installation"
   },
+
   "auth": {
     "email": "Email",
     "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "passwordNotMatch": "Les mots de passe ne correspondent pas",
     "forgotPassword": "Mot de passe oublié ?",
     "noAccount": "Pas de compte ?",
     "haveAccount": "Vous avez un compte ?",
@@ -66,16 +84,17 @@
     "fullName": "Nom complet",
     "phone": "Téléphone",
     "city": "Ville",
-    "experience": "Années d'expérience",
+    "experience": "Années d’expérience",
     "specialty": "Spécialité",
     "next": "Suivant",
     "previous": "Précédent",
     "submit": "Envoyer",
     "personalInfo": "Informations personnelles",
     "availability": "Disponibilité",
-    "selectCategory": "Choisir une catégorie",
-    "fillRequiredFields": "Remplissez tous les champs obligatoires"
+    "selectCategory": "Sélectionnez votre catégorie",
+    "fillRequiredFields": "Veuillez remplir tous les champs obligatoires"
   },
+
   "days": {
     "Monday": "Lundi",
     "Tuesday": "Mardi",
@@ -85,86 +104,84 @@
     "Saturday": "Samedi",
     "Sunday": "Dimanche"
   },
+
   "buttons": {
     "getStarted": "Commencer",
     "previous": "Précédent",
     "next": "Suivant",
     "submit": "Envoyer"
   },
+
   "categories": {
     "electrical": "Électricité",
     "plumbing": "Plomberie",
     "carpentry": "Menuiserie",
     "painting": "Peinture",
     "ac": "Climatisation",
-    "furniture": "Déménagement",
-    "appliance": "Réparation appareils",
+    "furniture": "Meubles",
+    "appliance": "Réparation d’appareils",
     "cleaning": "Nettoyage",
     "gardening": "Jardinage",
     "moving": "Déménagement",
     "security": "Sécurité",
     "smarthome": "Maison intelligente"
   },
-  "registration": {
-    "createAccount": "Créez votre compte",
-    "signInToContinue": "Choisissez votre type de compte pour continuer",
-    "customer": "Client",
-    "customerDetails": "Fournissez vos informations afin que nous puissions vous servir",
-    "worker": "Artisan",
-    "workerDetails": "Partagez votre spécialité et votre expérience",
-    "haveAccount": "Vous avez déjà un compte ?"
-  },
+
   "worker": {
     "personalInfo": "Informations personnelles",
     "fullName": "Nom complet",
     "phone": "Numéro de téléphone",
     "whatsapp": "Numéro WhatsApp",
-    "experienceYears": "Années d'expérience",
-    "specialtyQuestion": "Quel est ton domaine de spécialité ?",
+    "experienceYears": "Années d’expérience",
+    "specialtyQuestion": "Quelle est votre spécialité ?",
     "specialty": "Spécialité",
-    "availabilityQuestion": "Tu préfères travailler le week-end ou juste en semaine ? 😎",
-    "weekends": "Oui, j'aime travailler le samedi et dimanche !",
-    "weekdays": "Non, juste les jours de la semaine (lundi à vendredi)",
-    "selectCategory": "Choisis ta spécialité",
-    "fillRequiredFields": "Remplis tous les champs obligatoires"
+    "availabilityQuestion": "Travaillez-vous le week-end ? 😎",
+    "weekends": "Oui, week-ends inclus",
+    "weekdays": "Non, seulement en semaine",
+    "selectCategory": "Sélectionnez votre spécialité",
+    "fillRequiredFields": "Veuillez remplir tous les champs requis"
   },
+
   "errors": {
-    "fillRequiredFields": "Remplissez tous les champs obligatoires",
-    "selectCategory": "Sélectionnez une spécialité",
-    "selectAvailability": "Sélectionnez vos jours et heures de disponibilité"
+    "fillRequiredFields": "Veuillez remplir tous les champs",
+    "selectCategory": "Veuillez sélectionner une catégorie",
+    "selectAvailability": "Veuillez sélectionner votre disponibilité"
   },
+
   "footer": {
-    "description": "La plateforme de confiance pour tous les services de réparation à domicile au Maroc.",
+    "description": "La plateforme de confiance pour les réparations à domicile au Maroc.",
     "quickLinks": "Liens rapides",
     "services": "Services",
     "cities": "Villes",
     "legal": "Légal",
-    "contactInfo": "Contactez-nous",
+    "contactInfo": "Informations de contact",
     "rights": "Tous droits réservés",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
     "cookies": "Cookies"
   },
+
   "features": {
-    "title": "Pourquoi Nous Choisir",
-    "subtitle": "Des services simples, rapides et fiables pour tous.",
-    "verifiedTitle": "Travailleurs Vérifiés",
+    "title": "Pourquoi nous choisir",
+    "subtitle": "Des services simples, rapides et fiables.",
+    "verifiedTitle": "Artisans vérifiés",
     "verifiedDesc": "Tous les professionnels sont contrôlés et approuvés.",
-    "fastTitle": "Réservation Rapide",
+    "fastTitle": "Réservation rapide",
     "fastDesc": "Réservez votre service en quelques clics.",
     "supportTitle": "Support 24/7",
-    "supportDesc": "Notre équipe est toujours disponible pour vous aider."
+    "supportDesc": "Notre équipe est toujours disponible."
   },
+
   "how": {
     "title": "Comment ça marche",
-    "subtitle": "Des étapes simples pour obtenir votre service",
+    "subtitle": "Des étapes simples pour réaliser votre service",
     "registerTitle": "Créer un compte",
-    "registerDesc": "Inscrivez-vous comme client ou travailleur",
+    "registerDesc": "Inscrivez-vous comme client ou artisan",
     "chooseTitle": "Choisir un service",
     "chooseDesc": "Sélectionnez le service souhaité",
-    "bookTitle": "Réservation rapide",
-    "bookDesc": "Confirmez en quelques secondes",
+    "bookTitle": "Réserver instantanément",
+    "bookDesc": "Confirmez votre réservation rapidement",
     "feedbackTitle": "Évaluer le service",
-    "feedbackDesc": "Laissez un avis après la fin"
+    "feedbackDesc": "Donnez votre avis après le service"
   }
 }

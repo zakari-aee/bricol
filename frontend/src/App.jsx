@@ -12,6 +12,7 @@ import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import WorkerRegister from './pages/auth/WorkerRegister';
 import Home from './pages/customer/Home';
+import CustomerRegister from './pages/auth/CustomerRegister';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/register/worker" element={<WorkerRegister />} />
+              <Route path="/register/customer" element={<CustomerRegister />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>

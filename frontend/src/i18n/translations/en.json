@@ -18,6 +18,7 @@
     "back": "Back",
     "to": "to"
   },
+
   "registration": {
     "createAccount": "Create your account",
     "signInToContinue": "Choose your account type to continue",
@@ -25,8 +26,10 @@
     "customerDetails": "Provide your information so we can serve you",
     "worker": "Worker",
     "workerDetails": "Share your specialty and experience",
-    "haveAccount": "Already have an account?"
+    "haveAccount": "Already have an account?",
+    "customerForm": "Create customer account"
   },
+
   "nav": {
     "forWorkers": "For Workers",
     "forCustomers": "For Customers",
@@ -35,6 +38,7 @@
     "pricing": "Pricing",
     "blog": "Blog"
   },
+
   "hero": {
     "title": "Home Repairs",
     "highlighted": "With Confidence and Professionalism",
@@ -48,12 +52,14 @@
     "watchDemo": "🎬 Watch Demo",
     "getOffer": "⭐ Get Special Offer"
   },
+
   "stats": {
     "workers": "Certified Workers",
     "satisfaction": "Customer Satisfaction",
     "responseTime": "Average Response Time",
     "guarantee": "30-Day Guarantee"
   },
+
   "services": {
     "electrical": "Electrical",
     "plumbing": "Plumbing",
@@ -64,9 +70,12 @@
     "cleaning": "Cleaning",
     "installation": "Installation"
   },
+
   "auth": {
     "email": "Email",
     "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "passwordNotMatch": "Passwords do not match",
     "forgotPassword": "Forgot Password?",
     "noAccount": "No account?",
     "haveAccount": "Have an account?",
@@ -85,6 +94,7 @@
     "selectCategory": "Select your category",
     "fillRequiredFields": "Fill all required fields"
   },
+
   "days": {
     "Monday": "Monday",
     "Tuesday": "Tuesday",
@@ -94,12 +104,14 @@
     "Saturday": "Saturday",
     "Sunday": "Sunday"
   },
+
   "buttons": {
     "getStarted": "Get Started",
     "previous": "Previous",
     "next": "Next",
     "submit": "Submit"
   },
+
   "categories": {
     "electrical": "Electrical",
     "plumbing": "Plumbing",
@@ -114,6 +126,7 @@
     "security": "Security",
     "smarthome": "Smart Home"
   },
+
   "worker": {
     "personalInfo": "Personal Information",
     "fullName": "Full Name",
@@ -128,11 +141,13 @@
     "selectCategory": "Select your specialty",
     "fillRequiredFields": "Fill in all required fields"
   },
+
   "errors": {
     "fillRequiredFields": "Fill all required fields",
     "selectCategory": "Select a category",
     "selectAvailability": "Select your availability"
   },
+
   "footer": {
     "description": "The trusted platform for all home repair services in Morocco.",
     "quickLinks": "Quick Links",
@@ -145,6 +160,7 @@
     "terms": "Terms of Use",
     "cookies": "Cookies"
   },
+
   "features": {
     "title": "Why Choose Us",
     "subtitle": "Simple, fast, and trusted services built for real people.",
@@ -155,6 +171,7 @@
     "supportTitle": "24/7 Support",
     "supportDesc": "Our team is always available to help you."
   },
+
   "how": {
     "title": "How It Works",
     "subtitle": "Simple steps to get your service done",
