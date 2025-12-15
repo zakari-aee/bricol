@@ -134,7 +134,7 @@ const WorkerRegister = () => {
   // ========================
   return (
     <div
-      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-gray-100 p-4 ${
+      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-orange-50 to-gray-50 p-4 ${
         isRTL ? "rtl" : "ltr"
       }`}
     >

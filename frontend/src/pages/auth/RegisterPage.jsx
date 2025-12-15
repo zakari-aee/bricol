@@ -27,7 +27,7 @@ const RegisterPage = () => {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 flex items-center justify-center p-4"
+      className="min-h-screen bg-gradient-to-br from-white via-orange-50 to-gray-50 flex items-center justify-center p-4"
       dir={isRTL ? 'rtl' : 'ltr'}
     >
       <div className="absolute top-4 right-4">
