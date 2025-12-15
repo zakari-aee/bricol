@@ -3,7 +3,6 @@ import GlobalBackground from "../../components/layout/GlobalBackground";
 import HeroSection from "../../components/layout/HeroSection";
 import HowItWorksSection from "../../components/layout/HowItWorksSection";
 
-
 const Home = () => {
   return (
     <GlobalBackground>
